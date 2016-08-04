@@ -1,7 +1,3 @@
-var data = [
-  {id:1, author:"Auth1", text:"this *is* a _text_"},
-  {id:2, author:"Auth2", text:"this is a **test**"}
-];
 
 var CommentBox = React.createClass({
   getInitialState: function() {
@@ -55,7 +51,9 @@ var CommentForm = React.createClass({
   render: function() {
     return (
       <div className="commentForm">
-        Hello I am a CommentForm.
+        <input type="text" placeholder="author" />
+        <input type="text" placeholder="text" />
+        <input type="submit" value="post" />
       </div>
     );
   }
