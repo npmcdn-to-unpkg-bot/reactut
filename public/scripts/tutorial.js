@@ -21,8 +21,6 @@ var CommentBox = React.createClass({
     setInterval(this.loadComponentsFromServer, this.props.pollInterval);
   },
   handleCommentSubmit: function(comment){
-    console.log(comment);
-    this.setState(this.state.data.concat(comment));
     $.ajax({
       url: this.props.url,
       dataType: 'json',
